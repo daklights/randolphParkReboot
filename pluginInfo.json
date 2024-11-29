@@ -1,0 +1,18 @@
+{
+	"repoName": "randolphParkReboot",
+	"name": "Randolph Park Reboot",
+	"author": "DAK Lights",
+	"description": "Trigger FPP Reboot of P5 Panels",
+	"homeURL": "https://github.com/daklights/randolphParkReboot",
+	"srcURL": "https://github.com/daklights/randolphParkReboot.git",
+	"bugURL": "https://github.com/daklights/randolphParkReboot/issues",
+	"versions": [
+		{
+			"minFPPVersion": "5.0",
+			"maxFPPVersion": "0",
+			"branch": "master",
+			"allowUpdates": 1,
+			"sha": ""
+		}
+	]
+}
