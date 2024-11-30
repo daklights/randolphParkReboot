@@ -21,6 +21,7 @@
 	echo "Device Time Epoch: " . $combined['time'] . "<br /><br />";
 
 	echo "Current Sequence: " . $combined['currentSequence'] . "<br />";
+	echo "Elapsed Seconds: " . $combined['secondsElapsed'] . "<br />";
 	echo "Uptime Seconds: " . $combined['uptimeTotalSeconds'] . "<br /><br />";
 	
 	echo "Reboot Sequence #1: " . (array_key_exists('rebootSeq1',$pluginSettings) ? trim($pluginSettings['rebootSeq1']) : '') . "<br />";
