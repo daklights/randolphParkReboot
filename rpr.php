@@ -24,7 +24,6 @@
 	echo "Elapsed Seconds: " . $combined['secondsElapsed'] . "<br />";
 	echo "Uptime Seconds: " . $combined['uptimeTotalSeconds'] . "<br /><br />";
 	
-	echo "Reboot Sequence #1: " . (array_key_exists('rebootSeq1',$pluginSettings) ? trim($pluginSettings['rebootSeq1']) : '') . "<br />";
-	echo "Reboot Sequence #2: " . (array_key_exists('rebootSeq2',$pluginSettings) ? trim($pluginSettings['rebootSeq2']) : '') . "<br /><br />";
+	echo "Reboot Sequences: " . (array_key_exists('rebootSequences',$pluginSettings) ? trim($pluginSettings['rebootSequences']) : '') . "<br /><br />";
 
 ?>

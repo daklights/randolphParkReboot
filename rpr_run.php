@@ -13,16 +13,15 @@
 		
 		if ($playingData['mode'] == "remote") {
 			// remote mode
-			$rebootSeq1 = (array_key_exists('rebootSeq1',$pluginSettings) ? trim($pluginSettings['rebootSeq1']) : '');
-			$rebootSeq2 = (array_key_exists('rebootSeq2',$pluginSettings) ? trim($pluginSettings['rebootSeq2']) : '');
+			$rebootSequences = (array_key_exists('rebootSequences',$pluginSettings) ? trim($pluginSettings['rebootSequences']) : '');
 			
-			if ((trim($rebootSeq1) == trim($playingData['sequenceName']) || trim($rebootSeq2) == trim($playingData['playlistName'])) && ($combined['secondsElapsed'] < $combined['uptimeTotalSeconds'])) {
+			if ((stripos(trim($rebootSequences),trim($playingData['sequenceName'])) !== false) && ($combined['secondsElapsed'] < $combined['uptimeTotalSeconds'])) {
 				// a sequence is playing where we want to reboot remote FPP devices
 				//logEntry("Reboot Sequence Detected: " . $playingData['sequenceName']);
 				$result = file_get_contents('http://127.0.0.1/api/system/fppd/restart');
 				$sleepDuration = 30;
 			} else {
-				// song has not changed
+				// a sequence is playing where we do not want to reboot remote FPP devices
 				$sleepDuration = 30;
 			}
 		} else {
