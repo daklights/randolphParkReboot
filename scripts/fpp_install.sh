@@ -1,5 +1,6 @@
 #!/bin/bash
 
-#sed -i -e "s/^restartFlag .*/restartFlag = 1/" ${FPPHOME}/media/settings
+. ${FPPDIR}/scripts/common
+setSetting restartFlag 1
 
 #fpp_install
