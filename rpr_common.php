@@ -82,7 +82,7 @@
 			'secondsRemaining' => (array_key_exists('seconds_elapsed',$j) ? trim($j['seconds_remaining']) : -1),
 			'sequenceStarted' => (array_key_exists('seconds_elapsed',$j) ? trim(time() - $j['seconds_elapsed']) : -1),
 			'currentSequence' => (array_key_exists('current_sequence',$j) ? trim($j['current_sequence']) : ''),
-			'uptimeSeconds' => (array_key_exists('uptimeSeconds',$j) ? trim($j['uptimeSeconds']) : -1),
+			'uptimeTotalSeconds' => (array_key_exists('uptimeTotalSeconds',$j) ? trim($j['uptimeTotalSeconds']) : -1),
 			'time' => time()
 		);
 		return json_encode($response);
