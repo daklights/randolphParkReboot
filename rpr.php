@@ -25,5 +25,7 @@
 	echo "Uptime Total Seconds: " . $combined['uptimeTotalSeconds'] . "<br /><br />";
 
 	echo "Reboot Sequences: " . (array_key_exists('rebootSequences',$pluginSettings) ? trim($pluginSettings['rebootSequences']) : '') . "<br /><br />";
+	
+	echo "<script>setTimeout(function() {location.reload();}, 10000);</script>";
 
 ?>
