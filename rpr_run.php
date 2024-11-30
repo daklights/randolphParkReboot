@@ -16,7 +16,7 @@
 			$rebootSeq1 = (array_key_exists('rebootSeq1',$pluginSettings) ? trim($pluginSettings['rebootSeq1']) : '');
 			$rebootSeq2 = (array_key_exists('rebootSeq2',$pluginSettings) ? trim($pluginSettings['rebootSeq2']) : '');
 			
-			if (($rebootSeq1 == $playingData['sequenceName'] || $rebootSeq2 != $playingData['playlistName']) && ($combined['secondsElapsed'] < $combined['uptimeTotalSeconds'])) {
+			if ((trim($rebootSeq1) == trim($playingData['sequenceName']) || trim($rebootSeq2) == trim($playingData['playlistName'])) && ($combined['secondsElapsed'] < $combined['uptimeTotalSeconds'])) {
 				// a sequence is playing where we want to reboot remote FPP devices
 				//logEntry("Reboot Sequence Detected: " . $playingData['sequenceName']);
 				$result = file_get_contents('http://127.0.0.1/api/system/fppd/restart');
